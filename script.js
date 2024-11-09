@@ -26,17 +26,14 @@ const collectEmployees = function() {
    addEmployee = window.confirm('Would you like to add another employee?');
    }
 
-   if (!addEmployee) {
-     return;
-   }
 }
 
 // Display the average salary
 // TODO: Calculate and display the average salary
 const displayAverageSalary = function(employeesArray) {
  let totalSalary = 0;
- for (let i = 0; i < employeesArray.length; i++) {
-   totalSalary += employeesArray[i].salary;
+ for (let i = 0; i < employeesArray.length[i]; i++) {
+   totalSalary += employeesArray.salary;
  }
  let averageSalary = totalSalary / employeesArray.length;
 
