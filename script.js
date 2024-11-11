@@ -18,12 +18,13 @@ const collectEmployees = function() {
    let employeeObject = {
      firstName: firstName,
      lastName: lastName,
-     salary: salaryInput
+     salary: salary
    };
 
-   console.log(employeesArray);
+   //console.log(employeesArray);
    employeesArray.push(employeeObject);
    addEmployee = window.confirm('Would you like to add another employee?');
+   return employeesArray;
    }
 
 }
@@ -31,23 +32,28 @@ const collectEmployees = function() {
 // Display the average salary
 // TODO: Calculate and display the average salary
 const displayAverageSalary = function(employeesArray) {
- let totalSalary = 0;
- for (let i = 0; i < employeesArray.length[i]; i++) {
-   totalSalary += employeesArray.salary;
- }
- let averageSalary = totalSalary / employeesArray.length;
+  if (employeesArray.length === 0) {
+    console.log('There are no employees to calculate the average salary.');
+    return;
+  } 
+  let totalSalary = 0;
+  for (let i = 0; i < employeesArray.length[i]; i++) {
+    totalSalary += employeesArray.salary;
+  }
 
- if (employeesArray.length === 0) {
-   console.log('There are no employees to calculate the average salary.');
- } else {
-   console.log(`The average salary between our ${employeesArray.length} employee(s) is $${averageSalary.toFixed(2)}.`);
- }
+ let averageSalary = totalSalary / employeesArray.length;
+ console.log(`The average salary between our ${employeesArray.length} employee(s) is $${averageSalary.toFixed(2)}.`);
 }
 
 // Select a random employee
 // TODO: Select and display a random employee
 const getRandomEmployee = function(employeesArray) {
+  if (employeesArray.length === 0) {
+    console.log('There are no employees to select a random employee.');
+    return;
+  }
  let randomIndex = Math.floor(Math.random() * employeesArray.length);
+ let getRandomEmployee = employeesArray[randomIndex];
  console.log(`Congratulations! The lucky employee is ${employeesArray[randomIndex].firstName} ${employeesArray[randomIndex].lastName}, our random drawing winner!`);
 }
 
