@@ -42,7 +42,7 @@ const displayAverageSalary = function(employeesArray) {
  }
 
 let averageSalary = totalSalary / employeesArray.length;
-console.log(`The average salary between our ${employeesArray.length} employee(s) is $${averageSalary.toFixed(2)}.`);
+console.log(`The average employee salary between our ${employeesArray.length} employee(s) is $${averageSalary.toFixed(2)}`);
 }
 
 // Select a random employee
@@ -54,7 +54,7 @@ const getRandomEmployee = function(employeesArray) {
  }
 let randomIndex = Math.floor(Math.random() * employeesArray.length);
 let getRandomEmployee = employeesArray[randomIndex];
-console.log(`Congratulations! The lucky employee is ${employeesArray[randomIndex].firstName} ${employeesArray[randomIndex].lastName}, our random drawing winner!`);
+console.log(`Congratulations to ${employeesArray[randomIndex].firstName} ${employeesArray[randomIndex].lastName}, our random drawing winner!`);
 }
 
 /*
@@ -122,4 +122,3 @@ displayEmployees(employees);
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
-
