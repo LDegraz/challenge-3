@@ -11,9 +11,12 @@ const collectEmployees = function() {
    let lastName = window.prompt('Enter employee last name:');
    let salaryInput = window.prompt('Enter employee salary:');
    let salary = Number(salaryInput);
-     if (isNaN(salary)) {
-       window.alert('Please enter a valid number for the salary.');
-     }
+    }
+
+    if (isNaN(salary)) {
+      window.alert('Please enter a valid number for the salary.');
+      salary = 0;
+    }
 
    let employeeObject = {
      firstName: firstName,
@@ -27,7 +30,6 @@ const collectEmployees = function() {
    }
    return employeesArray;
 
-}
 
 // Display the average salary
 // TODO: Calculate and display the average salary
