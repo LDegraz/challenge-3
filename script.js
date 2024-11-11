@@ -24,8 +24,8 @@ const collectEmployees = function() {
    //console.log(employeesArray);
    employeesArray.push(employeeObject);
    addEmployee = window.confirm('Would you like to add another employee?');
-   return employeesArray;
    }
+   return employeesArray;
 
 }
 
@@ -37,8 +37,8 @@ const displayAverageSalary = function(employeesArray) {
     return;
   } 
   let totalSalary = 0;
-  for (let i = 0; i < employeesArray.length[i]; i++) {
-    totalSalary += employeesArray.salary;
+  for (let i = 0; i < employeesArray.length; i++) {
+    totalSalary += employeesArray[i].salary;
   }
 
  let averageSalary = totalSalary / employeesArray.length;
